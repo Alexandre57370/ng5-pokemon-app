@@ -11,7 +11,7 @@ Démonstration de l'application en ligne : https://ng-test-app-bb58d.firebaseapp
 ### Comment installer cette application ? ###
 Pour commencer, clonez ce dépôt sur votre machine locale:
 ```console
-git clone https://github.com/moumoune/ng-pokemon-app.git
+git clone https://github.com/moumoune/ng5-pokemon-app.git
 ```
 
 Ensuite installez les dépendances du projet:
