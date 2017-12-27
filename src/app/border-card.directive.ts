@@ -30,6 +30,6 @@ export class BorderCardDirective {
 	}
 
 	private setHeight(height: number) {
-		this.el.nativeElement.style.height = height;
+		this.el.nativeElement.style.height = height + 'px';
 	}
 }
