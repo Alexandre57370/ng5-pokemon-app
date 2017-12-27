@@ -17,7 +17,7 @@ export class DetailPokemonComponent implements OnInit {
 	ngOnInit(): void {
 		this.pokemons = POKEMONS;
 
-		let id = +this.route.snapshot.params['id'];
+		let id = +this.route.snapshot.paramMap.get('id');
 		for (let i = 0; i < this.pokemons.length; i++) {
 			if (this.pokemons[i].id == id) {
 				this.pokemon = this.pokemons[i];
