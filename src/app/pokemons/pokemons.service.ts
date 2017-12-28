@@ -36,6 +36,18 @@ export class PokemonsService {
 			'Electrik', 'Poison', 'Fée', 'Vol', 'Combat', 'Psy'];
 	}
 
+	/** PUT: update the pokemon on the server */
+	updatePokemon(pokemon: Pokemon): Observable<any> {
+		const httpOptions = {
+			headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+		};
+
+		return this.http.put(this.pokemonsUrl, pokemon, httpOptions).pipe(
+			tap(_ => this.log(`updated pokemon id=${pokemon.id}`)),
+			catchError(this.handleError<any>('updatePokemon'))
+		);
+	}
+
 	/* handleError */
 	private handleError<T>(operation = 'operation', result?: T) {
 		return (error: any): Observable<T> => {
