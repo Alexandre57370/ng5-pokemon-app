@@ -8,7 +8,7 @@ import { PokemonsService } from './pokemons.service';
 	template: `
     <h2 class="header center">Editer {{ pokemon?.name }}</h2>
 		<p class="center">
-			<img [src]="pokemon?.picture"/>
+			<img *ngIf="pokemon" [src]="pokemon.picture"/>
 		</p>
     <pokemon-form [pokemon]="pokemon"></pokemon-form>
   `,
