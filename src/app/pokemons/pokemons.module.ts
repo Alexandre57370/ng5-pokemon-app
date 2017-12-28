@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PokemonRoutingModule } from './pokemons-routing.module';
+import { AuthGuard } from '../auth-guard.service';
 
 import { ListPokemonComponent } from './list-pokemon.component';
 import { DetailPokemonComponent } from './detail-pokemon.component';
@@ -29,6 +30,9 @@ import { PokemonsService } from './pokemons.service';
 		BorderCardDirective,
 		PokemonTypeColorPipe
 	],
-	providers: [PokemonsService]
+	providers: [
+		PokemonsService,
+		AuthGuard
+	]
 })
 export class PokemonsModule { }
